@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.row1 {
+    width: 95%;
+    background-color: green;
+    padding: 80px;
+    margin-bottom: 50px;
+}
+
+.row1 .ticker {
+    font-size: 4rem;
+}
+
+.row1 .price {
+    font-size: 3rem;
+}
+
+.row1 .change {
+    font-size: 2rem;
+}
+
+.row2 .ticker {
+    font-size: 3rem;
+}
+
+.row2 {
+    width: 95%;
+    background-color: green;
+    padding: 80px;
+    margin-bottom: 50px;
+}
+
+.row2 .price {
+    font-size: 3rem;
+}
+
+.row2 .change {
+    font-size: 2rem;
+}
+
+.row3 {
+    width: 95%;
+    background-color: green;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.row3 .ticker {
+    font-size: 2rem;
+}
+
+.row3 .price {
+    font-size: 2rem;
+}
+
+.row3 .change {
+    font-size: 1rem;
+}
