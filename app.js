@@ -1,6 +1,7 @@
 const tickers = document.querySelectorAll('.ticker');
 const prices = document.querySelectorAll('.price');
 const changes = document.querySelectorAll('.change')
+const squares = document.querySelectorAll('.square')
 
 const getData = async function (){
     let urls = [];
@@ -19,7 +20,19 @@ const getData = async function (){
         prices[i].textContent = `$${price}`;
         const change = priceData[i].ticker.change;
         const percent = ((change / num) * 100);
-        changes[i].textContent = `${percent.toFixed(2)}%`;
+        changes[i].textContent = `${percent.toFixed(2)}`;
     }
+    for (let change of changes){
+        let num = parseFloat(change.textContent);
+        if(Math.sign(num) === 1 || Math.sign(num) === 0){
+            change.textContent = `+${num}%`;
+        } else {
+            change.parentElement.style.backgroundColor = 'red';
+            change.textContent = `${num}%`;
+        }
+    }
+    setTimeout(function(){
+        getData();
+    }, 30000);
 }
 getData();
